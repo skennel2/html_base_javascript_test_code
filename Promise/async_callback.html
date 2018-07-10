@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>    
+</head>
+<body>
+    
+</body>
+<script>
+
+    // 비동기 처리의 문제점
+    function getData(){
+        var data;
+
+        setTimeout(function(){
+            data = 'data';
+        }, 1000);        
+
+        return data;
+    }
+
+    alert(getData());
+
+    // 콜백을 이용해 해결
+    function getDataWithCallback(callback){
+        setTimeout(function(){
+            callback('data');
+        }, 1000)
+    }
+
+    getDataWithCallback(function(data){
+        alert(data);
+    });    
+
+</script>
+</html>

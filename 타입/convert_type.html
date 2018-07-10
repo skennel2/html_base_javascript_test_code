@@ -16,29 +16,33 @@
     convertNumberToStringUsingAutoCasting();
     convertStringToNumberUsingAutoCasting();
     
+    // 명시적으로 숫자를 스트링으로 바꾸기
     function convertNumberToStringExplicit(){
-        // 명시적으로 숫자를 스트링으로 바꾸기
+        
         var temp  = 2;
         temp = String(temp);
         alert(typeof temp); // string
     }
 
+    // 명시적으로 이용한 스트링을 숫자로 바꾸기
     function convertStringToNumberExplicit(){
-        // 명시적으로 이용한 스트링을 숫자로 바꾸기
+        
         var temp = "2"
         temp = Number(temp);
         alert(typeof temp); // number    
     }
     
+    // 자동형변환을 이용한 숫자를 스트링으로 바꾸기
     function convertNumberToStringUsingAutoCasting(){
-        // 자동형변환을 이용한 숫자를 스트링으로 바꾸기
+        
         var temp  = 2;
         temp += '';
         alert(typeof temp); // string
     };
 
+    // 자동형변환을 이용한 스트링을 숫자로 바꾸기
     function convertStringToNumberUsingAutoCasting(){
-        // 자동형변환을 이용한 스트링을 숫자로 바꾸기
+        
         var temp = "2"
         temp *= 1;
         alert(typeof temp); // number
