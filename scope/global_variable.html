@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>    
+</head>
+<body>
+    
+</body>
+<script>
+
+    function scopeTest(){
+        value = 10; // var 키워드로 선언하지 않으면, 전역변수로서 해석된다.
+    }
+
+    scopeTest(); // 함수를 꼭 실행해야한다.
+
+    alert(value);
+</script>
+</html>

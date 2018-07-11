@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>    
+</head>
+<body>
+    
+</body>
+<script>
+    // https://muckycode.blogspot.com/2015/03/javascript-execution-context-scope.html
+    // Execution Context는 Global Context, Function Call에 의해 생성되는 Active Context로 구분된다.    
+    // Active Context들은 Function Call에 의해 생성되며 생성된 순서대로 Stack 메모리에 삽입되게 되고, 
+    // Stack의 FILO 원리대로 현재 실행중인 Context는 Stack의 최상위에 위치하게 된다.
+    // 하나의 Execution Context는 1개의 변수 환경(Variable Environment), 1개의 Lexical Environment, 그리고 1개의 ThisBinding 속성, 총 3개의 부분으로 구성되 있다.
+
+    function scopeTest(){
+        value = 10; // var 키워드로 선언하지 않으면, 전역변수로서 해석된다.
+    }
+
+    scopeTest(); // 함수를 꼭 실행해야한다.
+
+    alert(value);
+</script>
+</html>
