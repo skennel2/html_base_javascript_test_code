@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>    
+</head>
+<body>
+    
+</body>
+<script>
+    function Person(name, age){
+        this.name = name;
+        this.age = age;
+    }
+    
+    Person.prototype.getName = function(){
+        return this.name;
+    }
+
+    Person.prototype.setName = function(name){
+        this.name = name;
+    }
+
+    // 생성자 함수를 일반함수처럼 호출
+    Person('fake', 28);  
+
+    // name과 age가 전역변수가 되어버렸다. 
+    alert(this.name);
+    alert(this.age);    
+</script>
+</html>
