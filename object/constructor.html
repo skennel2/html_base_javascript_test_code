@@ -14,5 +14,19 @@
         this.name = name;
         this.age = age;
     }
+    
+    Person.prototype.getName = function(){
+        return this.name;
+    }
+
+    Person.prototype.setName = function(name){
+        this.name = name;
+    }
+
+    var person = new Person('taylor', 30);
+    person.setName('andrew');
+
+    alert(person.getName())
+    console.log(person);
 </script>
 </html>
