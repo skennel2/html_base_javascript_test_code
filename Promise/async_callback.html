@@ -19,7 +19,8 @@
             data = 'data';
         }, 1000);        
 
-        return data; // setTimeout은 비동기로 동작하기 때문에 undefined로 리턴될 것이다. 
+        // setTimeout은 비동기로 동작하기 때문에 undefined로 리턴될 것이다. 
+        return data; 
     }
 
     alert(getData());

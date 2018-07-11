@@ -17,10 +17,12 @@
     // 하나의 Execution Context는 1개의 변수 환경(Variable Environment), 1개의 Lexical Environment, 그리고 1개의 ThisBinding 속성, 총 3개의 부분으로 구성되 있다.
 
     function scopeTest(){
-        value = 10; // var 키워드로 선언하지 않으면, 전역변수로서 해석된다.
+        // var 키워드로 선언하지 않으면, 전역변수로서 해석된다.
+        value = 10; 
     }
 
-    scopeTest(); // 함수를 꼭 실행해야한다.
+    // 함수를 꼭 실행해야한다.
+    scopeTest(); 
 
     alert(value);
 </script>

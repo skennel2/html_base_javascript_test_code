@@ -23,7 +23,9 @@
     alert(result);
 
     // reduce로 합계구하기
-    var array = [null, 112, 233, 44, 5]; // null이 있으면 어떻게 될까? null + 112 = 112 라서 정상동작한다. 
+
+    // null이 있으면 어떻게 될까? null + 112 = 112 라서 정상동작한다. 
+    var array = [null, 112, 233, 44, 5]; 
 
     var result = array.reduce(function(a, b){
         alert(a);

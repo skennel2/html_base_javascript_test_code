@@ -23,10 +23,10 @@
         this.name = name;
     }
 
-    // 생성자 함수를 일반함수처럼 호출
+    // 생성자 함수를 new 키워드를 제외하고 일반함수로 호출하면 
     Person('fake', 28);  
 
-    // name과 age가 전역변수가 되어버렸다. 
+    // name과 age가 전역변수가 되어버린다.
     alert(this.name);
     alert(this.age);    
 </script>
