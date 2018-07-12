@@ -10,18 +10,27 @@
     
 </body>
 <script>
+    
     var hello = function(name){
         var name = name;
 
+        // 일종의 private 메소드라고 볼수 있다. 
+        function alertText(text){
+            alert(text);
+        }
+
+        function sayHello(){
+            alertText('hello ' + name);
+        }
+
         return {
-            sayHello : function(){
-                alert('hello ' + name);
-            }
+            // return 으로 넘겨주는 것은 일종의 public 메소드라고 볼수 있다. 
+            sayHello : sayHello
         }
     }
 
     var ins = hello('na yun su');
-
     ins.sayHello();
+
 </script>
 </html>
