@@ -1,0 +1,1 @@
+Javascript Pattern 요약 - 디자인 패턴 : https://joshua1988.github.io/web_dev/javascript-pattern-design/
