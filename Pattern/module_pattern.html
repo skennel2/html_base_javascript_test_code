@@ -10,12 +10,18 @@
     
 </body>
 <script>
-    var dataParser = function(spec){
-        var data = 'data';
+    var hello = function(name){
+        var name = name;
 
         return {
-            
+            sayHello : function(){
+                alert('hello ' + name);
+            }
         }
     }
+
+    var ins = hello('na yun su');
+
+    ins.sayHello();
 </script>
 </html>
