@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>    
+</head>
+<body>
+    
+</body>
+<script>
+    function Person(name, age){
+        this.name = name;
+        this.age = age;
+    }
+    
+    Person.prototype.getName = function(){
+        return this.name;
+    }
+
+    Person.prototype.setName = function(name){
+        this.name = name;
+    }
+
+    Person.prototype.getJob = function(){
+        return this.job;
+    }
+
+    var person1 = new Person('jake', 30);
+
+    // 동적으로 속성을 추가하는것도 가능하다.
+    alert(person1.getJob()); // undefined
+
+    person1.job = 'Programmer';
+
+    alert(person1.getJob());
+
+</script>
+</html>
