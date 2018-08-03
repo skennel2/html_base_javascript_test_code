@@ -1,1 +1,1 @@
-# javascript_running_test
+# javascript_learning_test
