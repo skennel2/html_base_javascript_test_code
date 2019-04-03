@@ -27,5 +27,9 @@
     alert(person1.nation); // Korea
     alert(person2.nation); // Korea
 
+    // 콘솔로 관찰해보면 위에서 정의한 getName메소드는 _proto_ 객체프로퍼티에 존재하는것을 확인할 수 있으며,
+    // 그 하위의 _proto_에 toString등 기본적인 메소드가 있는 프로토타입이 존재하는 것을 확인할 수 있다. @TODO 일종의 상속관계?
+    console.log(person1);
+
 </script>
 </html>

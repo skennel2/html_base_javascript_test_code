@@ -10,6 +10,8 @@
     
 </body>
 <script>
+    
+
     function Person(name, age){
         this.name = name;
         this.age = age;
@@ -23,11 +25,19 @@
         this.name = name;
     }
 
-    // 생성자 함수를 new 키워드를 제외하고 일반함수로 호출하면 
-    Person('fake', 28);  
+    Person.prototype.getJob = function(){
+        return this.job;
+    }
 
-    // name과 age가 전역변수가 되어버린다. 
-    alert(this.name);
-    alert(this.age);    
+    var person1 = new Person('jake', 30);
+
+    // 동적으로 속성을 추가하는것도 가능하다.
+    var job = "Rapper";
+    alert(person1.getJob()); // Rapper가 아닌 undefined
+
+    person1.job = 'Programmer';
+
+    alert(person1.getJob());
+
 </script>
 </html>
