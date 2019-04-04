@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>    
+</head>
+<body>
+    
+</body>
+<script>
+    // 소스코드의 순서상 add함수는 호출 이전에 선언되었지만 인식한다.
+    // 이게 가능한 이유는 자바스크립트는 변수의 생성과 초기화의 작업을 분리하기 때문이다.
+    var result = add(3, 5);
+    
+    alert(result);
+
+    function add(a, b){
+        return a + b;
+    }
+
+    // 함수표현식일 호이스팅이 발생하지 않는다. 에러발생
+    result = subtract(11, 3); // uncaught type error : subtract is not a function
+
+    var subtract = function(a, b){
+        return a - b;
+    };
+
+</script>
+</html>
