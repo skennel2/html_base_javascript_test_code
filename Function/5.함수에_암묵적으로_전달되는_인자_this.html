@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>    
+</head>
+<body>
+    
+</body>
+<script>
+    
+    var obj1 = {
+        name : "나윤수",
+        alertName : function(){
+            // 여기서 this는 메소드가 포함된 객체를 의미한다.
+            alert(this.name);
+        }
+    }
+
+    var obj2 = {
+        name : "홍길동",
+        alertName : obj1.alertName
+    };
+
+    obj1.alertName();
+    obj2.alertName();
+
+</script>
+</html>

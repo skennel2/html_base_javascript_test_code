@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>    
+</head>
+<body>
+    
+</body>
+<script>
+    // 익명함수를 선언과 동시에 실행해 결과를 리턴받는다.
+    var result = (function (a, b){
+        return a + b;
+    })(3,3);
+
+    alert(result);
+
+    // 함수에 이름이 있어도 상관없다.
+    result = (function add (a, b){
+    return a + b;
+    })(2,2);
+
+    alert(result);
+
+    // 이러한 특성은 최초한번만 실행이 필요한 초기화 코드에 응용할 수 있다.
+    // JQuery등의 자바스크립트 라이브러리들이 특성을 이용하여 사용자코드와 라이브러리를 분리시킨다.
+</script>
+</html>

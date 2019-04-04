@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>    
+</head>
+<body>
+    
+</body>
+<script>
+
+    function math(){    
+        alert(add(2, 8));
+        alert(substract(10, 2));
+        function add(a, b){
+            return a + b;
+        }
+
+        function substract(a, b){
+            return a - b;
+        }
+    }
+
+    math();
+
+    // 에러코드 내부함수는 외부에서 접근할 수 없다.
+    // Uncaught ReferenceError: add is not defined
+    alert(add(10, 10));
+
+</script>
+</html>
