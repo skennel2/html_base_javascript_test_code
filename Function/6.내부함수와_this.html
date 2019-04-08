@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>    
+</head>
+<body>
+    
+</body>
+<script>
+    var value = 10;
+
+    var obj = {
+        value : 1,
+        func1 : function(){
+            this.value++; 
+            // 2 obj의 value를 가르킨다.
+            alert(this.value); 
+
+            function func2(){
+                this.value++;
+                // 11 windows의 value를 가르킨다.
+                // 즉 내부함수의 정의는 메소드가 아닌 일반 함수로서 동작한다는 것이다.
+                alert(this.value); 
+            }
+
+            func2();
+        }
+    }
+
+    obj.func1();
+</script>
+</html>
