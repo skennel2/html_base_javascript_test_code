@@ -15,6 +15,10 @@
         this.name = name;
     }
 
+    Person.prototype.getName = function(){
+        return this.name;
+    }
+
     // 생성자함수를 일반함수로 호출한다면?
     Person('person');
     // 생성자함수내의 this가 windows를 가르키는 것이 되버린다.
@@ -25,6 +29,11 @@
     // 1. 아래 구문이 실행되면 함수 코드가 실행되기전 빈객체를 생성한다.
     var person1 = new Person("NaYunsu");
     alert(person1.name);
+    alert(person1.getName());
+
+    console.log(Person);
+    console.log(person1);
+    
     
 </script>
 </html>

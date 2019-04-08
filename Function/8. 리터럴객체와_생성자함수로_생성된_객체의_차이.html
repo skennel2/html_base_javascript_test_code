@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>    
+</head>
+<body>
+    
+</body>
+<script>
+    // 리터럴 객체
+    var personL = {
+        name : "Son H.M",
+        age : 27, 
+        getName : function(){
+            return this.name;
+        }
+    };
+
+    // 생성자 함수
+    var Person = function (name, age){
+        this.name = name;
+        this.age = age;
+    };
+    Person.prototype.getName = function(){
+        return this.getName();
+    };
+
+    // 둘의 차이는?
+    console.log(personL);
+    console.log(new Person("Na Y.S", 32));
+
+</script>
+</html>
