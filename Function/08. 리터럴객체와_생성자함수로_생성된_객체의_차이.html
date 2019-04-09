@@ -28,9 +28,28 @@
         return this.getName();
     };
 
-    // 둘의 차이는?
+    // 리터럴로 생성된 객체와 생성자함수로 생성된 객체 둘의 차이는?
+    // 리터럴과 다르게 생성자함수로 정의된 객체의 메소드는 _proto_에 정의되어 있다.
     console.log(personL);
     console.log(new Person("Na Y.S", 32));
 
+    // 사실 리터럴 객체는 Object() 라는 내장 생성자 함수로 생성된 것이다.
+    var literal = {
+        value : 20,
+        getValue : function(){
+            return this.value;
+        }
+    };
+
+    var object = new Object();
+    object.value = 20;
+    object.getValue = function(){
+        return this.value;
+    }
+
+    // 둘이 완전 동일하다.
+    // 정의한 속성과 메소드들이 _proto_가 아닌 객체 바로 아래에 포함되어있다.
+    console.log(literal);
+    console.log(object);
 </script>
 </html>
