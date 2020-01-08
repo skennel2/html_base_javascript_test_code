@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>    
+    <button id='button'>배경색변경</button>
+    <div id='target' style="background-color: red;">
+        hello
+    </div>
+</head>
+<body>
+    
+</body>
+<script>
+    let target = document.getElementById('target');
+
+    let clickToggler = false;
+    let button = document.getElementById('button');
+    button.addEventListener("click", ()=>{
+        clickToggler = !clickToggler;
+        if(clickToggler) {
+            target.setAttribute("style", "background-color: blue");
+        } else {
+            target.setAttribute("style", "background-color: red");
+        }
+    });
+
+    const option = {
+        attributes: true,
+        attributeFilter: ['style'],
+    };
+
+    let observer = new MutationObserver((mutations)=>{
+        console.log(mutations);
+    });
+
+    observer.observe(target, option);
+</script>
+</html>
